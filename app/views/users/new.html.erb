@@ -1,0 +1,20 @@
+<h1>New User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Back', users_path %>
+
+<form action="<%= users_url %>" method="POST">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<label for="username">Username
+<input type="text" id="username" name="user[username]"> 
+</label>
+
+<label for="password">password
+<input type="password" id=password name="user[password]">
+</label>
+
+<input type="submit" value ="Sign Up">
+</form>
+
+

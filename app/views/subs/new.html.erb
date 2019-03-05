@@ -1,0 +1,16 @@
+<h1>New Sub</h1>
+
+<%= render 'form', sub: @sub %>
+
+<%= link_to 'Back', subs_path %>
+
+
+<form action="<%= subs_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    
+    <label for="name">Title: </label>
+    <input type="text" name="sub[title]" id="name">
+    <label for="description">Description</label>
+    <textarea name="sub[description]" id="description" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+</form>
